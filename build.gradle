@@ -54,6 +54,8 @@ dependencies {
    compile "org.springframework.boot:spring-boot-starter-actuator"
    compile "org.springframework.boot:spring-boot-autoconfigure"
    compile "org.springframework.boot:spring-boot-starter-tomcat"
+   compile "org.springframework.security:spring-security-crypto"
+
    compile "org.grails:grails-dependencies"
    compile "org.grails:grails-web-boot"
 
