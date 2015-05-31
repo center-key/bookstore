@@ -51,6 +51,13 @@ class SecurityService {
       setupRoles()
       setupInitialUser()
       printSummary()
+      ////////////////////////////
+      println("---\nObjects:")
+      Role.list().each { println("   Role ${it.id} - ${it.name}") }
+      User.list().each { println("   User ${it.id} - ${it.email}") }
+      Capability.list().each { println("   ${User.get(it.userId).email} - ${Role.get(it.roleId).name}") }
+      println("---")
+      ////////////////////////////
       }
 
 }

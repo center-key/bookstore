@@ -1,8 +1,11 @@
 class BootStrap {
 
+   def grailsApplication
    def securityService
 
    def init = { servletContext ->
+      def cfg = grailsApplication.config
+      println("${cfg.info.app.name} v${cfg.info.app.version}")
       securityService.bootstrap()
       }
 
