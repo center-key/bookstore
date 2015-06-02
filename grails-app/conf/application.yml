@@ -20,7 +20,9 @@ security:
         name: Administrator
       - code: dev-ops
         name: DevOps
-   initialSetupUser: setup@example.com
+   newUserDefaultRole: user
+   initialSetupUser:   setup@example.com
+   minPasswordLength:  10
 
 ---
 grails:
