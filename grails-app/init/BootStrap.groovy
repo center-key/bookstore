@@ -1,3 +1,5 @@
+// Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors
+
 class BootStrap {
 
    def grailsApplication
@@ -5,7 +7,8 @@ class BootStrap {
 
    def init = { servletContext ->
       def cfg = grailsApplication.config
-      println("${cfg.info.app.name} v${cfg.info.app.version}")
+      log.println("Grails v${grailsApplication.metadata.getGrailsVersion()}")
+      log.println("${cfg.info.app.name} v${cfg.info.app.version}")
       securityService.bootstrap()
       }
 

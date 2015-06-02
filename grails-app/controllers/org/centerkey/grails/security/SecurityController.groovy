@@ -1,3 +1,5 @@
+// Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors
+
 package org.centerkey.grails.security
 
 import grails.converters.JSON
@@ -33,6 +35,12 @@ class SecurityController {
          [auth: true,  redirect: session.securityRedirect ?: "/"] :
          [auth: false, message: msg]
       render info as JSON
+      }
+
+   def signin() {
+      }
+
+   def signup() {
       }
 
 }

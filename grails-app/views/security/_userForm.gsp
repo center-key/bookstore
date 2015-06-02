@@ -1,3 +1,5 @@
+<%-- Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors --%>
+
 <main>
    <g:form name="grails-security" action="${action}">
       <h1>${label}</h1>

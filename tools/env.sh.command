@@ -1,4 +1,5 @@
 #!/bin/sh
+# Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors
 
 #########################
 #  Project Environment  #

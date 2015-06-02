@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors -->
 <html lang="en" class="no-js">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

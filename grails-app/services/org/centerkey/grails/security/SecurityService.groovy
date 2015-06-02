@@ -1,3 +1,5 @@
+// Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors
+
 package org.centerkey.grails.security
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
