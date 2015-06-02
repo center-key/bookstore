@@ -2,3 +2,6 @@
 /.gradle
 /build
 /sp
+
+# Extraneous OS files
+.DS_Store
