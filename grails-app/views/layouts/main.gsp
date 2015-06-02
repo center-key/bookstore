@@ -6,8 +6,8 @@
         <title><g:layoutTitle default="Grails"/></title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <asset:stylesheet src="application.css"/>
+        <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
         <asset:javascript src="application.js"/>
-
         <g:layoutHead/>
     </head>
     <body>
