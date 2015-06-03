@@ -3,8 +3,9 @@
 class UrlMappings {
 
    static mappings = {
-      "/signin" (controller: "security", action: "signin")
-      "/signup" (controller: "security", action: "signup")
+      "/signup"  (controller: "security", action: "signup")
+      "/signin"  (controller: "security", action: "signin")
+      "/signout" (controller: "security", action: "signout")
       "/$controller/$action?/$id?" {
          constraints {
             }

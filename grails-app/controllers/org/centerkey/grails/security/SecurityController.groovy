@@ -37,10 +37,15 @@ class SecurityController {
       render info as JSON
       }
 
+   def signup() {
+      }
+
    def signin() {
       }
 
-   def signup() {
+   def signout() {
+      session.securityUserId = null
+      redirect(uri: "/")
       }
 
 }
