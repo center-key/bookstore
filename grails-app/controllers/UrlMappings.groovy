@@ -6,6 +6,7 @@ class UrlMappings {
       "/signup"  (controller: "security", action: "signup")
       "/signin"  (controller: "security", action: "signin")
       "/signout" (controller: "security", action: "signout")
+      "/book"    (controller: "book")  //workaround to remove unsightly "index"
       "/$controller/$action?/$id?" {
          constraints {
             }
