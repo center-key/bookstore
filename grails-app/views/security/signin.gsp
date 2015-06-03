@@ -7,7 +7,9 @@
 </head>
 <body>
 
-<g:render template="userForm" model="[label: 'Sign in', action: 'authenticate']" />
+<main>
+   <security:signInForm />
+</main>
 
 </body>
 </html>

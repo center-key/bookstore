@@ -7,7 +7,9 @@
 </head>
 <body>
 
-<g:render template="userForm" model="[label: 'Sign up', action: 'register']" />
+<main>
+   <security:signUpForm />
+</main>
 
 </body>
 </html>

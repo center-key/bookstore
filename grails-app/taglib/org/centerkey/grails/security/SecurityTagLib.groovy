@@ -26,12 +26,20 @@ class SecurityTagLib {
          out << body()
       }
 
+   def signUpLink = { attrs, body ->
+      // Usage:
+      //    <security:signUpLink />
+      // or
+      //    <security:signUpLink>Create account</security:signUpLink>
+      out << g.link([controller: "security", action: "signup"], { body() ?: "sign up" })
+      }
+
    def signInLink = { attrs, body ->
       // Usage:
       //    <security:signInLink />
       // or
       //    <security:signInLink>Login</security:signInLink>
-      out << g.link([controller: "security", action: "signin"], { body() ?: "Sign in" })
+      out << g.link([controller: "security", action: "signin"], { body() ?: "sign in" })
       }
 
    def signOutLink = { attrs, body ->
@@ -39,7 +47,22 @@ class SecurityTagLib {
       //    <security:signOutLink />
       // or
       //    <security:signOutLink>Logout</security:signOutLink>
-      out << g.link([controller: "security", action: "signout"], { body() ?: "Sign out" })
+      out << g.link([controller: "security", action: "signout"], { body() ?: "sign out" })
+      }
+
+   def signInSignOutLink = {
+      // Usage:
+      //    <security:signInSignOutLinks />
+      out << (session.securityUserId ?
+         security.username() + " (" + security.signOutLink() + ")" : security.signInLink())
+      }
+
+   def signUpForm = {
+      out << render(template: "/security/userForm", model: [label: "Sign up", action: "register"])
+      }
+
+   def signInForm = {
+      out << render(template: "/security/userForm", model: [label: "Sign in", action: "authenticate"])
       }
 
 }
