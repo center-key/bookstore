@@ -17,7 +17,7 @@
          <a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails" /></a>
       </div>
       <div id=user-account>
-         <security:signInSignOutLink />
+         <security:authToggleLink />
       </div>
       <g:layoutBody />
       <div class="footer" role="contentinfo"></div>

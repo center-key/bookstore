@@ -31,7 +31,7 @@ class SecurityTagLib {
       //    <security:signUpLink />
       // or
       //    <security:signUpLink>Create account</security:signUpLink>
-      out << g.link([controller: "security", action: "signup"], { body() ?: "sign up" })
+      out << g.link([controller: "security", action: "signup"], { body() ?: "Sign up" })
       }
 
    def signInLink = { attrs, body ->
@@ -39,7 +39,7 @@ class SecurityTagLib {
       //    <security:signInLink />
       // or
       //    <security:signInLink>Login</security:signInLink>
-      out << g.link([controller: "security", action: "signin"], { body() ?: "sign in" })
+      out << g.link([controller: "security", action: "signin"], { body() ?: "Sign in" })
       }
 
    def signOutLink = { attrs, body ->
@@ -47,21 +47,26 @@ class SecurityTagLib {
       //    <security:signOutLink />
       // or
       //    <security:signOutLink>Logout</security:signOutLink>
-      out << g.link([controller: "security", action: "signout"], { body() ?: "sign out" })
+      out << g.link([controller: "security", action: "signout"], { body() ?: "Sign out" })
       }
 
-   def signInSignOutLink = {
+   def authToggleLink = {
       // Usage:
-      //    <security:signInSignOutLinks />
+      //    <security:authToggleLink />
       out << (session.securityUserId ?
-         security.username() + " (" + security.signOutLink() + ")" : security.signInLink())
+         security.username() + " (" + security.signOutLink(null, "sign out") + ")" :
+         security.signInLink())
       }
 
    def signUpForm = {
+      // Usage:
+      //    <security:signUpForm />
       out << render(template: "/security/userForm", model: [label: "Sign up", action: "register"])
       }
 
    def signInForm = {
+      // Usage:
+      //    <security:signInForm />
       out << render(template: "/security/userForm", model: [label: "Sign in", action: "authenticate"])
       }
 
