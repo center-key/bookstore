@@ -32,3 +32,14 @@ KISS
 * Make it a plugin
 * Authorization (roles)
 * Token (CSRF)
+
+**Screenshots:**
+
+Sign in link<br>
+![Sign in link](http://centerkey.org/screenshots/grails-security-plugin-sign-in-link.png)
+
+Sign in form<br>
+![Sign in form](http://centerkey.org/screenshots/grails-security-plugin-sign-in-form.png)<br>
+
+Sign up form<br>
+![Sign up form](http://centerkey.org/screenshots/grails-security-plugin-sign-up-form.png)<br>
