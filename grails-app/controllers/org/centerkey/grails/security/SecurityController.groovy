@@ -10,11 +10,15 @@ class SecurityController {
 
    static allowedMethods = [authenticate: "POST", register: "POST"]
 
+   def rootUri() {
+      return "${request.contextPath}/"
+      }
+
    def authenticate() {
       def user = securityService.authenticate(params.email, params.password)
       session.securityUserId = user?.id as String
       def info = user ?
-         [auth: true,  redirect: session.securityRedirect ?: "/"] :
+         [auth: true,  redirect: session.securityRedirect ?: rootUri()] :
          [auth: false, message: "Email or password is incorrect."]
       render info as JSON
       }
@@ -32,7 +36,7 @@ class SecurityController {
       def user = msg ? null : securityService.register(params.email, params.password)
       session.securityUserId = user?.id as String
       def info = user ?
-         [auth: true,  redirect: session.securityRedirect ?: "/"] :
+         [auth: true,  redirect: session.securityRedirect ?: rootUri()] :
          [auth: false, message: msg]
       render info as JSON
       }
@@ -45,7 +49,7 @@ class SecurityController {
 
    def signout() {
       session.securityUserId = null
-      redirect(uri: "/")
+      redirect(uri: rootUri())
       }
 
 }
