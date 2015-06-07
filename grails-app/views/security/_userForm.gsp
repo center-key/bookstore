@@ -2,7 +2,7 @@
 <g:form name="grails-security" action="${action}">
 
    <h1>${label}</h1>
-   <p class=err-msg>&nbsp;</p>
+   <p class=err-msg></p>
    <label>
       <span>Email:</span>
       <input type=email name=email placeholder="Your email address">
@@ -21,9 +21,11 @@
    </nav>
 
    <style>
+      #grails-security { padding-left: 20px; margin-bottom: 40px; }
+      #grails-security .err-msg { height: 1.2em; color: firebrick; }
       #grails-security label { display: block; margin-bottom: 15px; }
-      #grails-security label >span:first-child { display: inline-block; width: 6em; text-align: right; }
-      #grails-security button { margin-left: 21em; cursor: pointer; }
+      #grails-security label >span:first-child { display: inline-block; width: 120px; text-align: right; }
+      #grails-security button { margin: 0px 0px 15px 124px; cursor: pointer; }
    </style>
 
    <script>
@@ -45,6 +47,7 @@
             },
          setup: function() {
             grailsSecurity.component.find('button').click(grailsSecurity.action);
+            grailsSecurity.component.find('input[name=email]').focus();
             }
          };
       $(grailsSecurity.setup);
