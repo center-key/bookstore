@@ -1,4 +1,4 @@
-// Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors
+// Grails Security Plugin ~ MIT License ~ Copyright (c) 2015 by individual contributors
 
 package org.centerkey.grails.security
 
@@ -7,15 +7,15 @@ import org.bson.types.ObjectId
 class Capability {
 
    ObjectId id
-   Date     created = new Date()
+   Date     dateCreated
    String   userId
    String   roleId
 
    static mapWith = "mongo"
    static mapping = {
-      created index: true
-      userId  index: true
-      roleId  index: true
+      dateCreated index: true
+      userId      index: true
+      roleId      index: true
       }
 
 }

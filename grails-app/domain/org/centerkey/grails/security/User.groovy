@@ -1,4 +1,4 @@
-// Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors
+// Grails Security Plugin ~ MIT License ~ Copyright (c) 2015 by individual contributors
 
 package org.centerkey.grails.security
 
@@ -7,16 +7,16 @@ import org.bson.types.ObjectId
 class User {
 
    ObjectId id
-   Date     created = new Date()
+   Date     dateCreated
    String   email
    String   hash
    Boolean  enabled = true
 
    static mapWith = "mongo"
    static mapping = {
-      created index: true
-      email   index: true
-      enabled index: true
+      dateCreated index: true
+      email       index: true
+      enabled     index: true
       }
    static constraints = {
       email nullable: false, blank: false, unique: true
