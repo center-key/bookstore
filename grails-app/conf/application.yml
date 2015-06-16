@@ -14,15 +14,12 @@ spring:
          check-template-location: false
 security:
    roles:
-      - code: user
-        name: User
-      - code: admin
-        name: Administrator
-      - code: dev-ops
-        name: DevOps
+      - { code: user,    name: User }
+      - { code: admin,   name: Administrator }
+      - { code: dev-ops, name: DevOps }
    newUserDefaultRole: user
-   initialSetupUser:   setup@example.com
    minPasswordLength:  10
+   initialSetupUser:   setup@example.com
 
 ---
 grails:
