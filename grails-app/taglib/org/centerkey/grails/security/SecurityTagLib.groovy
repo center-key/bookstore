@@ -1,4 +1,4 @@
-// Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors
+// Grails Security Plugin ~ MIT License ~ Copyright (c) 2015 by individual contributors
 
 package org.centerkey.grails.security
 
@@ -12,16 +12,16 @@ class SecurityTagLib {
       out << User.get(session.securityUserId)?.email
       }
 
-   def isAnonymous = { attrs, body ->
+   def ifAnonymous = { attrs, body ->
       // Usage:
-      //    <security:isAnonymous>You are not signed in.</security:isAnonymous>
+      //    <security:ifAnonymous>You are not signed in.</security:ifAnonymous>
       if (!session.securityUserId)
          out << body()
       }
 
-   def isSignedIn = { attrs, body ->
+   def ifSignedIn = { attrs, body ->
       // Usage:
-      //    <security:isSignedIn>You are signed in.</security:isSignedIn>
+      //    <security:ifSignedIn>You are signed in.</security:ifSignedIn>
       if (session.securityUserId)
          out << body()
       }

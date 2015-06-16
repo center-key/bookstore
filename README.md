@@ -1,4 +1,4 @@
-<!-- Grails Security ~ MIT License (Open Source) ~ Copyright (c) 2015 by individual contributors -->
+<!-- Grails Security Plugin ~ MIT License ~ Copyright (c) 2015 by individual contributors -->
 
 # Grails Security
 
@@ -15,8 +15,8 @@ KISS
 1. Sign out (logout)
 1. TagLibs
    * `<security:username />`
-   * `<security:isAnonymous>...</security:isAnonymous>`
-   * `<security:isSignedIn>...</security:isSignedIn>`
+   * `<security:ifAnonymous>...</security:ifAnonymous>`
+   * `<security:ifSignedIn>...</security:ifSignedIn>`
    * `<security:signUpLink />`
    * `<security:signInLink />`
    * `<security:signOutLink />`
