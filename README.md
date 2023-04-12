@@ -2,13 +2,10 @@
 
 # Grails Security
 
-###The Bookstore
+## The Bookstore
 A Grails 3.0 sample application with straightforward security you can understand.
 
-**Philosophy:**<br>
-KISS
-
-**Features implemented:**
+### Features implemented:
 
 1. Sign up (register)
 1. Sign in (authenticate)
@@ -24,7 +21,7 @@ KISS
    * `<security:signUpForm />`
    * `<security:signInForm />`
 
-**Next up:**
+### Next up:
 
 * Change password
 * Reset password
@@ -33,13 +30,13 @@ KISS
 * Authorization (roles)
 * Token (CSRF)
 
-**Screenshots:**
+### Screenshots:
 
 Sign in link<br>
-![Sign in link](http://centerkey.org/screenshots/grails-security-plugin-sign-in-link.png)
+![Sign in link](https://centerkey.org/screenshots/grails-security-plugin-sign-in-link.png)<br>
 
 Sign in form<br>
-![Sign in form](http://centerkey.org/screenshots/grails-security-plugin-sign-in-form.png)<br>
+![Sign in form](https://centerkey.org/screenshots/grails-security-plugin-sign-in-form.png)<br>
 
 Sign up form<br>
-![Sign up form](http://centerkey.org/screenshots/grails-security-plugin-sign-up-form.png)<br>
+![Sign up form](https://centerkey.org/screenshots/grails-security-plugin-sign-up-form.png)<br>
