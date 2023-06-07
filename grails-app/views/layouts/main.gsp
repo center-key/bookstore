@@ -8,7 +8,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <asset:stylesheet src="application.css" />
       <style>#user-account { float: right; margin: 4px 6px; }</style>
-      <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
       <asset:javascript src="application.js" />
       <g:layoutHead />
    </head>

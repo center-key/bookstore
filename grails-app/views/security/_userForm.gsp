@@ -29,28 +29,29 @@
    </style>
 
    <script>
-      var grailsSecurity = {
-         component: $('#grails-security'),
+      const grailsSecurity = {
+         component: globalThis.document.getElementById('grails-security'),
          action: function() {
-            var elem = grailsSecurity.component;
-            var params = {
-               email:    elem.find('[type=email]').val(),
-               password: elem.find('[type=password]').val()
-               }
-            function handle(json) {
+            const elem = grailsSecurity.component;
+            const params = {
+               email:    elem.querySelector('[type=email]').value,
+               password: elem.querySelector('[type=password]').value,
+               };
+            const handle = (json) => {
                if (json.auth)
                   window.location = json.redirect;
                else
-                  elem.find('.err-msg').text(json.message).hide().fadeIn();
-               }
-            $.post(elem.attr('action'), params, handle);
+                  elem.querySelector('.err-msg').textContent = json.message;
+               };
+            const url = elem.getAttribute('action');
+            fetchJson.post(url, params, handle);
             },
          setup: function() {
-            grailsSecurity.component.find('button').click(grailsSecurity.action);
-            grailsSecurity.component.find('input[name=email]').focus();
-            }
+            grailsSecurity.component.querySelector('button').click(grailsSecurity.action);
+            grailsSecurity.component.querySelector('input[name=email]').focus();
+            };
          };
-      $(grailsSecurity.setup);
+      grailsSecurity.setup();
    </script>
 
 </g:form>
