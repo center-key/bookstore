@@ -2,8 +2,8 @@
 
 <html>
 <head>
-<meta name="layout" content="main">
-<title>Sign Up</title>
+   <meta name="layout" content="main">
+   <title>Sign Up</title>
 </head>
 <body>
 

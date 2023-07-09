@@ -31,7 +31,7 @@
    <script>
       const grailsSecurity = {
          component: globalThis.document.getElementById('grails-security'),
-         action: function() {
+         action() {
             const elem = grailsSecurity.component;
             const params = {
                email:    elem.querySelector('[type=email]').value,
@@ -43,11 +43,12 @@
                else
                   elem.querySelector('.err-msg').textContent = json.message;
                };
-            const url = elem.getAttribute('action');
+            const url = elem.action;
             fetchJson.post(url, params, handle);
             },
          setup: function() {
-            grailsSecurity.component.querySelector('button').click(grailsSecurity.action);
+            const button = grailsSecurity.component.querySelector('button');
+            button.addEventListener('click', grailsSecurity.action);
             grailsSecurity.component.querySelector('input[name=email]').focus();
             };
          };
